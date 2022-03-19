@@ -113,18 +113,7 @@ class Matrix{
     }
     Rain=()=>{
         this.fadeEffect()
-        this.ctx.font  = this.fontSize+' '+this.font;
-        const ypos = Array(parseInt(80)).fill(0);
-        let y=0
-        ypos.forEach((n, ind) => {
-            const text = rand(this.charArray)
-            const x = ind * 2;
-            console.log(text, x, y)
-            this.ctx.fillText(text, x, y);
-            this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
-            if (y > 100 + Math.random() * 10000) y = 0;
-            else y += 20;
-        });
+        ma
     }
     
     itrate=()=>{
