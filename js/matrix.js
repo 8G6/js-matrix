@@ -68,7 +68,9 @@ class Matrix{
           }
       }
     }
-    rain
+    rain=()=>{
+        
+    }
     itrate=()=>{
         this.init()
         this.intervel=setInterval(()=>{
