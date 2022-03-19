@@ -115,7 +115,7 @@ class Matrix{
     Rain=()=>{
         this.fadeEffect()
         this.ctx.font  = this.fontSize+' '+this.font;
-        const ypos = Array(parseInt(10)).fill(0);
+        const ypos = Array(parseInt(1000)).fill(0);
         matrix(this.ctx,ypos)
     }
     
