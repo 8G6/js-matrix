@@ -25,7 +25,7 @@ ctx.fillRect(0, 0, w, h);
 
 const cols = Math.floor(w / 20) + 1;
 const ypos = Array(cols).fill(0);
-
+c=0
 function matrix () {
  
   ctx.fillStyle = '#0001';
@@ -38,7 +38,8 @@ function matrix () {
   for(i=0;i<screen.width;i+=20){
         ctx.fillText(text, i, i);
   }
-  
+  c++
+
 }
 // render the animation at 20 FPS.
 setInterval(matrix, 50);
