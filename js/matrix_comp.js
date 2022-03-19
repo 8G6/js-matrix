@@ -3,15 +3,17 @@ let uni   = (a) => a.charCodeAt()
 let chr   = (a) => String.fromCharCode(a)
 let rand  = (a) => a[Math.floor(Math.random()*a.length)]
 
+
+
 function bodyDime(){
     return {w:document.body.offsetWidth,h:document.body.offsetHeight}
 }
 
-function setColor(color){
+function setColor(color,random){
     if(!color.match('#')){
         color = colors[color.toLowerCase()]
     }
-    return color;
+    return random ? randomColor() : color;
 }
 
 function coordinates(space_x,space_y){
@@ -39,6 +41,11 @@ function maximize(canvas){
     
 
 }
+
+function randomColor(){
+    return '#'+rand(hex)+rand(hex)+rand(hex)
+}
+
 let chars=(strat,end)=>{
     strat = uni(strat)
     end   = uni(end)
@@ -49,6 +56,9 @@ let chars=(strat,end)=>{
     }
     return arr
 }
+
+
+const hex = toHex(0,256);
 
 let colors = {
     "air force blue": "#5d8aa8",

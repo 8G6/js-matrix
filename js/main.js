@@ -23,7 +23,7 @@ let chars=(strat,end)=>{
 }
 
 
-let t=chars('0','Ⅻ')
+let t=chars('0','z')
 o    =toHex(0,256)
 const canvas = document.getElementById('canv');
 const ctx = canvas.getContext('2d');
@@ -46,19 +46,22 @@ ctx.font = '25pt monospace';
 ctx.fillText(rand(t),78,277); 
 
 function matrix () {
-    i++
-  ctx.fillStyle = '#0f0f0f';
-  ctx.fillRect(0, 0, w*10, h*10);
-  clr = i%2==0 ? [rand(o),rand(o),rand(o)].join('') : [rand(o),'FF',rand(o)].join('')
-  ctx.fillStyle = '#'+clr
-  ctx.font = '25pt monospace';
-  
-  c+=rand([1,16,32,52,7])
-    ctx.fillText(rand(t),c,  y*(i%10));
-    if (y > 100 + Math.random() * 1e2) y = 0;
-    else y = y + 7;
-    if(!(i<t.length-1)){i=0}
-    if(!(c<w)){c=0}
+    ctx.fillStyle = '#0001';
+    ctx.fillRect(0, 0, w, h);
+    
+    ctx.font = '25pt monospace';
+    k=[]
+    for(i=0;i<80;i++){
+        for(j=0;j<80;j++){
+            ctx.fillStyle = '#'+rand(o)+rand(o)+rand(o)
+            if(y>Math.random()*1e3){y=0}
+            y+=Math.random()*1e4
+            ctx.fillText(rand(t),i*20,y*20)
+        }
+        
+    }
+    
+        
 }
 
-setInterval(matrix,25);
+setInterval(matrix,20);
