@@ -113,7 +113,7 @@ class Matrix{
     }
     Rain=()=>{
         this.fadeEffect()
-        ma
+        matrix()
     }
     
     itrate=()=>{
