@@ -90,7 +90,7 @@ class Matrix{
     Rain=()=>{
         this.fadeEffect()
         let i,j;
-        for(i=0;i<screen.height;i++){
+        for(i=0;i<screen.height;i20){
             this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
             this.ctx.fillText(rand(this.charArray),i*2,i)
         }
