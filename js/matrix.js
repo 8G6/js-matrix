@@ -89,8 +89,7 @@ class Matrix{
     }
     Rain=()=>{
         this.fadeEffect()
-        
-
+        this.ctx.font  = this.fontSize+' '+this.font;
         let i,j;
         for(i=0;i<screen.width;i+=20){
             for(j=0;j<screen.height*10*Math.random();j++){
