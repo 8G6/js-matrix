@@ -18,24 +18,7 @@ class Matrix{
         this.randomColor = false
         this.fadeOut     = false
     }
-    constructor(canvas){
-        this.canvas      = $('#'+canvas)
-        this.timeout     = 50
-        this.ctx         = this.canvas.getContext('2d');
-        this.background  = 'black'
-
-        this.font        = 'monospace'
-        this.fontSize    = '20pt'
-        this.charArray   = chars('0','z')
-        this.intervel    = null
-        this.fontColor   = 'green'
-        this.maximize    = true
-        this.spaceX      = 50
-        this.spaceY      = 50
-        this.random      = false
-        this.randomColor = false
-        this.fadeOut     = false
-    }
+    
       
 
     fadeEffect=()=>{
@@ -57,6 +40,8 @@ class Matrix{
             maximize(this.canvas)
         }
     }
+
+
     matrix=()=>{
       this.fadeEffect()
       let i,j;
@@ -95,13 +80,7 @@ class Matrix{
             }
         },this.timeout)
     }
-    rain = ()=>{
-      this.setBackground('black')
-      let i,j;
-      this.ctx.font  = this.fontSize+' '+this.font;
-      let [x,y]=coordinates(this.spaceX,this.spaceY)
-    }
-
+     
     
     break=(delay=1)=>{
         setTimeout(()=>{
@@ -118,10 +97,16 @@ class Matrix{
 mat = new Matrix('canv')
 mat.fontSize    = '15pt'
 mat.maximize    = 1
-mat.random      = 0
 mat.fadeOut     = false
 mat.randomColor = false
 mat.itrate()
+mat = new Matrix('canv')
+mat.fontSize    = '15pt'
+mat.maximize    = 1
+mat.fadeOut     = false
+mat.randomColor = false
+mat.itrate()
+
 
 
 
