@@ -11,7 +11,7 @@ async function ip4(){
     try{
         const {stdout} = await exe('ipconfig | findstr IPv4')
         let ip  = stdout.split(':')[1]
-        console.log(`IP adress ${ip}`)
+        console.log(`connected to internet \n IP adress ${ip}`)
     }
     catch(e){
         console.log('Not connected')
@@ -49,12 +49,12 @@ async function run(){
                 n=n.split('\\')
                }
               catch(e){}
-                console.log('connected to internet')
+                
                 const {stdout} = await exe(`uprepo auto-update-${n[n.length-1].length!=1 ? n[n.length-1]: n}`)
                 console.log(stdout)
             }
             else{
-                console.log('No internet')
+                
             }
         
         });
