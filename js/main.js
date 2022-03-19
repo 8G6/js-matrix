@@ -20,7 +20,7 @@ const cols = Math.floor(w / 20) + 1;
 const ypos = Array(cols).fill(0);
 
 function matrix () {
-  // Draw a semitransparent black rectangle on top of previous drawing
+ 
   ctx.fillStyle = '#0001';
   ctx.fillRect(0, 0, w, h);
 
