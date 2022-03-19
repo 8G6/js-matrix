@@ -1,5 +1,5 @@
 // Get the canvas node and the drawing context
-const canvas = document.getElementById('canvasMatrix');
+const canvas = document.getElementById('canv');
 const ctx = canvas.getContext('2d');
 
 // set the width and height of the canvas
