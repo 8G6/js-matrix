@@ -71,7 +71,7 @@ class Matrix{
     rain=()=>{
         const ypos = Array(parseInt(screen.height/this.spaceY)).fill(0);
         ypos.forEach((y, ind) => {
-            // generate a random character
+
             const text = String.fromCharCode(Math.random() * 122);
         
             // x coordinate of the column, y coordinate is already given
