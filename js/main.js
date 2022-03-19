@@ -67,6 +67,3 @@ function matrix () {
 setInterval(matrix,20);
 
 
-
-
-c
