@@ -79,7 +79,7 @@ class Matrix{
           if(this.randJSON.x){
             for(i=0;i<y.length;i++){
                 this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
-                this.ctx.fillText(rand(this.charArray),screen.width*Math.random(),y[i])
+                this.ctx.fillText(rand(this.charArray),Math.random() * screen.width,i)
             }
           }
         
