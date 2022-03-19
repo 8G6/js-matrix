@@ -4,6 +4,12 @@ function maximize(canvas){
     canvas.height = document.body.offsetHeight;
     
 }
+function fixBody(){
+    document.body.style.margin=0;
+    document.body.style.padding=0;
+    document.body.style.width='100vw';
+    document.body.style.height='100vh'
+}
 
 const canvas = document.getElementById('canv');
 const ctx = canvas.getContext('2d');
