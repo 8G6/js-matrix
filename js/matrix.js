@@ -78,11 +78,11 @@ class Matrix{
     }
     rain = ()=>{
       this.setBackground('black')
-      let i,j,k;
+      let i,j;
       this.ctx.font  = this.fontSize+' '+this.font;
       let [x,y]=coordinates(this.spaceX,this.spaceY)
     }
-    
+
     break=(delay=1)=>{
         setTimeout(()=>{
             clearInterval(this.intervel)
