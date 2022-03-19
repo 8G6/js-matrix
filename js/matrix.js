@@ -5,7 +5,6 @@ class Matrix{
         this.timeout     = 50
         this.ctx         = this.canvas.getContext('2d');
         this.background  = 'black'
-
         this.font        = 'monospace'
         this.fontSize    = '20pt'
         this.charArray   = chars('0','z')
