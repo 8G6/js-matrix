@@ -69,7 +69,7 @@ class Matrix{
       }
     }
     rain=()=>{
-        const ypos = Array(parseInt screen.width/this.spaceY).fill(0);
+        const ypos = Array(parseInt(screen.width/this.spaceY)).fill(0);
     }
     itrate=()=>{
         this.init()
