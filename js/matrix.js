@@ -125,7 +125,7 @@ mat.fontSize    = '25pt'
 mat.maximize    = 1
 mat.fadeOut     = false
 mat.randomColor = true
-mat.timeout     = 
+mat.timeout     = 100
 mat.itrate()
 
 
