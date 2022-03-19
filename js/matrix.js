@@ -90,7 +90,10 @@ class Matrix{
     Rain=()=>{
         this.fadeEffect()
         let i,j;
-        for(i=0;i<1)
+        for(i=0;i<100;i++){
+            this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
+                this.ctx.fillText(rand(this.charArray),Math.random() * screen.width,y[i])
+        }
     }
     
     itrate=()=>{
