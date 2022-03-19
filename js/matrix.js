@@ -96,7 +96,6 @@ class Matrix{
                 this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
                 this.ctx.fillText(rand(this.charArray),i,j)
             }
-            this.ctx.fillStyle         = '#000000'
         }
     }
     
