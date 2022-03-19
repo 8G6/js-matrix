@@ -95,6 +95,7 @@ class Matrix{
             for(j=0;j<screen.height*Math.random();j+=40){
                 this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
                 this.ctx.fillText(rand(this.charArray),i,j)
+                this.ctx.fillStyle         = '#000000'
             }
         }
     }
