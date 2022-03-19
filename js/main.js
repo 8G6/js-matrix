@@ -49,7 +49,7 @@ function matrix () {
     // otherwise just move the y coordinate for the column 20px down,
     else ypos[ind] = y + 20;
   });
-}
+
 }
 // render the animation at 20 FPS.
 setInterval(matrix, 50);
