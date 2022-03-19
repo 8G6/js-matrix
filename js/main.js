@@ -35,7 +35,6 @@ function matrix () {
 
     ctx.fillText(text, x, y);
     if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
-    // otherwise just move the y coordinate for the column 20px down,
     else ypos[ind] = y + 20;
   });
 }
