@@ -89,11 +89,9 @@ class Matrix{
         },delay)
         
     }
-    
     hide=()=>{
         this.canvas.style.display = 'none'
     }
-
 }
 
 mat = new Matrix('canv')
