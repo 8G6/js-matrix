@@ -74,7 +74,7 @@ class Matrix{
         const ypos = Array(parseInt(80)).fill(0);
         ypos.forEach((y, ind) => {
             const text = rand(this.charArray)
-            const x = ind * 20;
+            const x = ind * 2;
             console.log(text, x, y)
             this.ctx.fillText(text, x, y);
             this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
