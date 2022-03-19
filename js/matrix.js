@@ -88,16 +88,40 @@ class Matrix{
       
     }
     Rain=()=>{
-        this.fadeEffect()
-        this.ctx.font  = this.fontSize+' '+this.font;
-        let i,j;
-        for(i=0;i<screen.width;i+=this.spaceX){
-            for(j=0;j<screen.height*Math.random();j+=this.spaceY){
-                this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
-                this.ctx.fillText(rand(this.charArray),i,j)
-                this.ctx.fillStyle         = '#000000'
-            }
-        }
+        // this.fadeEffect()
+        // this.ctx.font  = this.fontSize+' '+this.font;
+        // let i,j;
+        // for(i=0;i<screen.width;i+=this.spaceX){
+        //     for(j=0;j<screen.height*Math.random();j+=this.spaceY){
+        //         this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
+        //         this.ctx.fillText(rand(this.charArray),i,j)
+        //         this.ctx.fillStyle         = '#000000'
+        //     }
+        // }
+        const cols = Math.floor(window.width / 20) + 1;
+  const ypos = Array(cols).fill(0);
+
+  ctx.fillStyle = '#0001';
+  ctx.fillRect(0, 0, w, h);
+
+  ctx.fillStyle = '#0f0';
+  ctx.font = '20pt monospace';
+
+  
+  ypos.forEach((y, ind) => {
+    // generate a random character
+    const text = String.fromCharCode(Math.random() * 122);
+
+    // x coordinate of the column, y coordinate is already given
+    const x = ind * 20;
+    // render the character at (x, y)
+    ctx.fillText(text, x, y);
+
+    // randomly reset the end of the column if it's at least 100px high
+    if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
+    // otherwise just move the y coordinate for the column 20px down,
+    else ypos[ind] = y + 20;
+  });
     }
     
     itrate=()=>{
