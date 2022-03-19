@@ -92,7 +92,7 @@ class Matrix{
         let i,j;
         for(i=0;i<screen.height;i++){
             this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
-            this.ctx.fillText(rand(this.charArray),i*10,i)
+            this.ctx.fillText(rand(this.charArray),i*5,i)
         }
     }
     
