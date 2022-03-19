@@ -88,16 +88,16 @@ class Matrix{
       
     }
     Rain=()=>{
-        // this.fadeEffect()
-        // this.ctx.font  = this.fontSize+' '+this.font;
-        // let i,j;
-        // for(i=0;i<screen.width;i+=this.spaceX){
-        //     for(j=0;j<screen.height*Math.random();j+=this.spaceY){
-        //         this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
-        //         this.ctx.fillText(rand(this.charArray),i,j)
-        //         this.ctx.fillStyle         = '#000000'
-        //     }
-        // }
+        this.fadeEffect()
+        this.ctx.font  = this.fontSize+' '+this.font;
+        let i,j;
+        for(i=0;i<screen.width;i+=this.spaceX){
+            for(j=0;j<screen.height*Math.random();j+=this.spaceY){
+                this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
+                this.ctx.fillText(rand(this.charArray),i,j)
+                this.ctx.fillStyle         = '#000000'
+            }
+        }
     }
     
     itrate=()=>{
