@@ -5,6 +5,25 @@ class Matrix{
         this.timeout     = 50
         this.ctx         = this.canvas.getContext('2d');
         this.background  = 'black'
+
+        this.font        = 'monospace'
+        this.fontSize    = '20pt'
+        this.charArray   = chars('0','z')
+        this.intervel    = null
+        this.fontColor   = 'green'
+        this.maximize    = true
+        this.spaceX      = 50
+        this.spaceY      = 50
+        this.random      = false
+        this.randomColor = false
+        this.fadeOut     = false
+    }
+    constructor(canvas){
+        this.canvas      = $('#'+canvas)
+        this.timeout     = 50
+        this.ctx         = this.canvas.getContext('2d');
+        this.background  = 'black'
+
         this.font        = 'monospace'
         this.fontSize    = '20pt'
         this.charArray   = chars('0','z')
@@ -83,6 +102,7 @@ class Matrix{
       let [x,y]=coordinates(this.spaceX,this.spaceY)
     }
 
+    
     break=(delay=1)=>{
         setTimeout(()=>{
             clearInterval(this.intervel)
