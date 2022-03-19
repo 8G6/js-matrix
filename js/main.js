@@ -31,10 +31,8 @@ function matrix () {
   ypos.forEach((y, ind) => {
    
     const text = String.fromCharCode(Math.random() * 122);
-
-    // x coordinate of the column, y coordinate is already given
     const x = ind * 20;
-    // render the character at (x, y)
+
     ctx.fillText(text, x, y);
 
     // randomly reset the end of the column if it's at least 100px high
