@@ -78,7 +78,7 @@ class Matrix{
             console.log(text, x, y)
             this.ctx.fillText(text, x, y);
             this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
-            if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
+            if (y > 100 + Math.random() * 10000) y = 0;
             else y += 20;
         });
     }
