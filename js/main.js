@@ -44,7 +44,12 @@ clr = i%2==0 ? [rand(o),rand(o),rand(o)].join('') : [rand(o),'FF',rand(o)].join(
 ctx.fillStyle = '#'+clr
 ctx.font = '25pt monospace';
 ctx.fillText(rand(t),78,277); 
-
+function fixBody(){
+    document.body.style.margin=0;
+    document.body.style.padding=0;
+    document.body.style.width='100vw';
+    document.body.style.height='100vh'
+}
 function matrix () {
     ctx.fillStyle = '#0001';
     ctx.fillRect(0, 0, w, h);
