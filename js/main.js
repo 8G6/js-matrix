@@ -38,7 +38,7 @@ function matrix () {
   for(i=0;i<screen.width;i+=20){
         ctx.fillText(text, c, i);
   }
-  c++
+  c+
 
 }
 // render the animation at 20 FPS.
