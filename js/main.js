@@ -17,7 +17,7 @@ const ctx = canvas.getContext('2d');
 
 const w = canvas.width = document.body.offsetWidth;
 const h = canvas.height = document.body.offsetHeight;
-
+maximize(canvas)
 
 ctx.fillStyle = '#000';
 ctx.fillRect(0, 0, w, h);
