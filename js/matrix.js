@@ -72,9 +72,8 @@ class Matrix{
         const ypos = Array(parseInt(screen.height/this.spaceY)).fill(0);
         ypos.forEach((y, ind) => {
 
-            const text = rand(this.c)
+            const text = rand(this.charArray)
         
-            // x coordinate of the column, y coordinate is already given
             const x = ind * 20;
             // render the character at (x, y)
             ctx.fillText(text, x, y);
