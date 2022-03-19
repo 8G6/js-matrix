@@ -38,10 +38,7 @@ ctx.fillRect(0, 0, w, h);
 i=0
 y=0
 c=0
-ctx.fillStyle = '#0f0f0f';
-ctx.fillRect(0, 0, w, h);
-clr = i%2==0 ? [rand(o),rand(o),rand(o)].join('') : [rand(o),'FF',rand(o)].join('')
-ctx.fillStyle = '#'+clr
+
 ctx.font = '25pt monospace';
 ctx.fillText(rand(t),78,277); 
 function fixBody(){
@@ -58,6 +55,10 @@ function maximize(canvas){
 }
 maximize(canvas)
 function matrix () {
+    ctx.fillStyle = '#0f0f0f';
+ctx.fillRect(0, 0, w, h);
+clr = i%2==0 ? [rand(o),rand(o),rand(o)].join('') : [rand(o),'FF',rand(o)].join('')
+ctx.fillStyle = '#'+clr
     ctx.fillStyle = '#0001';
     ctx.fillRect(0, 0, w, h);
     
