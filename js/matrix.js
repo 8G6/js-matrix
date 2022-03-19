@@ -1,6 +1,6 @@
 function matrix (ctx,ypos) {
-    w = screen.height
-    h= screen.width
+    h = screen.height
+    w= screen.width
     ctx.fillStyle = '#0001';
     ctx.fillRect(0, 0, w, h);
   
