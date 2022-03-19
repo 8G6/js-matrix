@@ -115,7 +115,7 @@ class Matrix{
         this.fadeEffect()
         this.ctx.font  = this.fontSize+' '+this.font;
         const ypos = Array(parseInt(80)).fill(0);
-        matrix(this.c)
+        matrix(this.ctx,y)
     }
     
     itrate=()=>{
