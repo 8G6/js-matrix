@@ -99,7 +99,7 @@ class Matrix{
         //     }
         // }
         const cols = Math.floor(window.width / 20) + 1;
-        const ypos = Array(cols).fill(0);
+        const ypos = Array(80).fill(0);
 
         ctx.fillStyle = '#0001';
         ctx.fillRect(0, 0, w, h);
