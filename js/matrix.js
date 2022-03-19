@@ -68,7 +68,7 @@ class Matrix{
           }
       }
     }
-    rain=()=>{
+    Rain=()=>{
         const ypos = Array(parseInt(screen.height/this.spaceY)).fill(0);
         ypos.forEach((y, ind) => {
             const text = rand(this.charArray)
