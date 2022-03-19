@@ -102,7 +102,7 @@ class Matrix{
         const ypos = Array(80).fill(0);
 
         this.ctx.fillStyle = '#0001';
-        ctx.fillRect(0, 0, w, h);
+        this.ctx.fillRect(0, 0, w, h);
 
         ctx.fillStyle = '#0f0';
         ctx.font = '20pt monospace';
