@@ -35,7 +35,7 @@ function matrix () {
   ctx.font = '20pt monospace';
 
   const text = String.fromCharCode(Math.random() * 122);
-  for(i=0;i<1000;i++)
+  for(i=0;i<screen.width;i+=20)
 
 // render the animation at 20 FPS.
 setInterval(matrix, 50);
