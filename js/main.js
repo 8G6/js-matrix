@@ -38,6 +38,7 @@ function matrix () {
   for(i=0;i<screen.width;i+=20){
         ctx.fillText(text, i, i);
   }
+  
 }
 // render the animation at 20 FPS.
 setInterval(matrix, 50);
