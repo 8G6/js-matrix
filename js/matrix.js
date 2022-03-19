@@ -91,7 +91,7 @@ class Matrix{
         this.fadeEffect()
         this.ctx.font  = this.fontSize+' '+this.font;
         let i,j;
-        for(i=0;i<screen.width;i+=20){
+        for(i=0;i<screen.width;i+=80){
             for(j=0;j<screen.height*10*Math.random();j+=25){
                 this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
                 this.ctx.fillText(rand(this.charArray),i,j)
