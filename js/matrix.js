@@ -78,8 +78,8 @@ class Matrix{
             if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
             else ypos[ind] = y + 20;
           });
-        }
     }
+    
     itrate=()=>{
         this.init()
         this.intervel=setInterval(()=>{
