@@ -2,7 +2,7 @@
 class Matrix{
     constructor(canvas){
         this.canvas      = $('#'+canvas)
-        this.timeout     = 50
+        this.timeout     = 100
         this.ctx         = this.canvas.getContext('2d');
         this.background  = 'black'
         this.font        = 'monospace'
