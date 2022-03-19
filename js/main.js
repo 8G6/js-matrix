@@ -68,7 +68,7 @@ function matrix () {
         const text = rand(this.charArray)
         const x = ind * 20;
         console.log(text, x, y)
-        this.ctx.fillText(text, x, ind);
+        ctx.fillText(text, x, ind);
         if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
         else ypos[ind] = y + 20;
     });
