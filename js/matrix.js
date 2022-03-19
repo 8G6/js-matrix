@@ -86,7 +86,9 @@ class Matrix{
             if(this.random){
                 this.Random()
             }
-            if(this.rain){}
+            if(this.rain){
+                this.Rain()
+            }
             else{
                 this.matrix()
             }
