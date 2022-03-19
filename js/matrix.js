@@ -79,7 +79,7 @@ class Matrix{
             this.ctx.fillText(text, x, y);
             this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
             if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
-            else yy + 20;
+            else y += 20;
         });
     }
     
