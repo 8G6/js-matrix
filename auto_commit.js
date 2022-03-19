@@ -50,7 +50,6 @@ async function run(){
                }
               catch(e){}
                 console.log('connected to internet')
-                console.log(`cmd /d uprepo auto-update-${n[n.length-1].length!=1 ? n[n.length-1] : n}`)
                 const {stdout} = await exe(`uprepo auto-update-${n[n.length-1].length!=1 ? n[n.length-1]: n}`)
                 console.log(stdout)
             }
