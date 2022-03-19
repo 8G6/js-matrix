@@ -35,10 +35,21 @@ function matrix () {
   ctx.font = '20pt monospace';
 
   
-  for(i=0;i<screen.width;i+=200){ 
-        ctx.fillText(String.fromCharCode(Math.random() * 122), Math.random() * screen.width,i);
-  }
+  ypos.forEach((y, ind) => {
+    // generate a random character
+    const text = String.fromCharCode(Math.random() * 122);
 
+    // x coordinate of the column, y coordinate is already given
+    const x = ind * 20;
+    // render the character at (x, y)
+    ctx.fillText(text, x, y);
+
+    // randomly reset the end of the column if it's at least 100px high
+    if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
+    // otherwise just move the y coordinate for the column 20px down,
+    else ypos[ind] = y + 20;
+  });
+}
 }
 // render the animation at 20 FPS.
 setInterval(matrix, 50);
