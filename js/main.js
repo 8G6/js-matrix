@@ -1,77 +1,43 @@
-let    $  = (a) => document.querySelector(a) 
-let uni   = (a) => a.charCodeAt()
-let chr   = (a) => String.fromCharCode(a)
-let rand  = (a) => a[Math.floor(Math.random()*a.length)]
-
-function toHex(strat,end){
-    let arr=[];
-    for(i=strat;i<end+1;i++){
-        arr.push(i.toString(16))
-    }
-    return arr
-}
-
-let chars=(strat,end)=>{
-    strat = uni(strat)
-    end   = uni(end)
-    let arr=[]
-    for(i=strat;i<end+1;i++){
-        y=chr(i)
-        if(!y.match(/[\x]/g)){arr.push(y)}
-    }
-    return arr
-}
-
-
-let t=chars('0','z')
-o    =toHex(0,256)
-const canvas = document.getElementById('canv');
+// Get the canvas node and the drawing context
+const canvas = document.getElementById('canvasMatrix');
 const ctx = canvas.getContext('2d');
 
+// set the width and height of the canvas
 const w = canvas.width = document.body.offsetWidth;
 const h = canvas.height = document.body.offsetHeight;
+
+// draw a black rectangle of width and height same as that of the canvas
+ctx.fillStyle = '#000';
+ctx.fillRect(0, 0, w, h);
+
 const cols = Math.floor(w / 20) + 1;
 const ypos = Array(cols).fill(0);
 
-ctx.fillStyle = '#FFF';
-ctx.fillRect(0, 0, w, h);
-i=0
-y=0
-c=0
-
-ctx.font = '25pt monospace';
-ctx.fillText(rand(t),78,277); 
-function fixBody(){
-    document.body.style.margin=0;
-    document.body.style.padding=0;
-    document.body.style.width='100vw';
-    document.body.style.height='100vh'
-}
-function maximize(canvas){
-    fixBody()
-    canvas.width = document.body.offsetWidth;
-    canvas.height = document.body.offsetHeight;
-    
-}
-maximize(canvas)
 function matrix () {
-    
-    ctx.fillStyle = '#0001';
-    ctx.fillRect(0, 0, w, h);
-    
-    ctx.font = '25pt monospace';
-    k=[]
-    const ypos = Array(parseInt(screen.height/100)).fill(0);
-    ypos.forEach((y, ind) => {
-        const text = rand(t)
-        const x = ind * 20;
-        console.log(text, x, y)
-        ctx.fillText(text, x, ind);
-        if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
-        else ypos[ind] = y + 20;
-    });
+  // Draw a semitransparent black rectangle on top of previous drawing
+  ctx.fillStyle = '#0001';
+  ctx.fillRect(0, 0, w, h);
+
+  // Set color to green and font to 15pt monospace in the drawing context
+  ctx.fillStyle = '#0f0';
+  ctx.font = '20pt monospace';
+
+  // for each column put a random character at the end
+  ypos.forEach((y, ind) => {
+    // generate a random character
+    const text = String.fromCharCode(Math.random() * 122);
+
+    // x coordinate of the column, y coordinate is already given
+    const x = ind * 20;
+    // render the character at (x, y)
+    ctx.fillText(text, x, y);
+
+    // randomly reset the end of the column if it's at least 100px high
+    if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
+    // otherwise just move the y coordinate for the column 20px down,
+    else ypos[ind] = y + 20;
+  });
 }
 
-setInterval(matrix,20);
-
-
+// render the animation at 20 FPS.
+setInterval(matrix, 50);
