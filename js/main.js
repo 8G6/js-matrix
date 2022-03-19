@@ -58,7 +58,6 @@ function matrix () {
             y+=Math.random()*1e4
             ctx.fillText(rand(t),i*20,y*20)
         }
-        
     }
 }
 
