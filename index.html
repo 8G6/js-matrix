@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canv"></canvas>
+    <script src="js/matrix_comp.js"></script>
+    <script>
+        mat = new Matrix('canv')
+        mat.fontSize    = '11pt'
+        mat.maximize    = 1
+        mat.random      = true
+        mat.fadeOut     = true
+        mat.randomColor = true
+        mat.itrate()
+    </script>
+</body>
+</html>
