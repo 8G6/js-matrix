@@ -50,6 +50,12 @@ function fixBody(){
     document.body.style.width='100vw';
     document.body.style.height='100vh'
 }
+function maximize(canvas){
+    fixBody()
+    canvas.width = document.body.offsetWidth;
+    canvas.height = document.body.offsetHeight;
+    
+}
 function matrix () {
     ctx.fillStyle = '#0001';
     ctx.fillRect(0, 0, w, h);
