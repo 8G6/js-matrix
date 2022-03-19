@@ -7,7 +7,7 @@ class Matrix{
         this.background  = 'black'
         this.font        = 'monospace'
         this.fontSize    = '20pt'
-        this.charArray   = chars('0','1')
+        this.charArray   = chars('0','z')
         this.intervel    = null
         this.fontColor   = 'green'
         this.maximize    = true
