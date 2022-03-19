@@ -8,9 +8,15 @@
 </head>
 <body>
     <canvas id="canv"></canvas>
-    <script src="js/matrix_comp.js"></script>
+    <script src="js/matrix.js"></script>
     <script>
-        
+        mat = new Matrix('canv')
+        mat.fontSize    = '11pt'
+        mat.maximize    = 1
+        mat.random      = true
+        mat.fadeOut     = true
+        mat.randomColor = true
+        mat.itrate()
     </script>
 </body>
 </html>
