@@ -34,7 +34,7 @@ function matrix () {
   ctx.fillStyle = '#0f0';
   ctx.font = '20pt monospace';
 
- 
+  const text = String.fromCharCode(Math.random() * 122);
   ypos.forEach((y, ind) => {
     
     const x = ind * 20;
