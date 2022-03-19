@@ -103,12 +103,7 @@ mat.randomColor = false
 mat.itrate()
 
 
-mat = new Matrix('canv')
-mat.fontSize    = '15pt'
-mat.maximize    = 1
-mat.fadeOut     = false
-mat.randomColor = false
-mat.itrate()
+
 
 
 
