@@ -17,6 +17,7 @@ class Matrix{
         this.randomColor = false
         this.fadeOut     = false
         this.rain        = false
+        this.randJSON    = {x:false,y:false}
     }
     
       
@@ -58,13 +59,33 @@ class Matrix{
     Random = () => {
       this.fadeEffect()
       this.ctx.font  = this.fontSize+' '+this.font;
-      let i,j,Y=0;
+      let i,j;
       let [x,y]=coordinates(this.spaceX,this.spaceY)
-      
-      for(i=0;i<x.length;i++){
-            this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
-            this.ctx.fillText(rand(this.charArray),x[i],Math.random()*screen.height)
+      try{
+          if(this.random && (!this.randJSON.y || !this.randJSON.y)){
+            for(i=0;i<x.length;i++){
+                for(j=0;j<y.length;j++){
+                    this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
+                    this.ctx.fillText(rand(this.charArray),parseInt(screen.width*Math.random()),parseInt(screen.height*Math.random()))
+                }
+            }
+          }
+          if(this.randJSON.y){
+            for(i=0;i<x.length;i++){
+                this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
+                this.ctx.fillText(rand(this.charArray),x[i],screen.height*Math.random())
+            }
+          }
+          if(this.randJSON.x){
+            for(i=0;i<y.length;i++){
+                this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
+                this.ctx.fillText(rand(this.charArray),screen.width*Math.random(),y[i])
+            }
+          }
+        
       }
+     catch(e){}
+      
     }
     Rain=()=>{
         this.fadeEffect()
@@ -114,9 +135,6 @@ mat = new Matrix('canv')
 mat.fontSize    = '5pt'
 mat.maximize    = 1
 mat.rain        = 1
-mat.random      = 1
-mat.
-mat.spaceX      = 100
 mat.fadeOut     = true
 mat.randomColor = true
 mat.itrate()
