@@ -72,7 +72,7 @@ class Matrix{
         this.fadeEffect()
         this.ctx.font  = this.fontSize+' '+this.font;
         const ypos = Array(parseInt(80)).fill(0);
-        ypos.forEach((y, ind) => {
+        ypos.forEach((n, ind) => {
             const text = rand(this.charArray)
             const x = ind * 2;
             console.log(text, x, y)
