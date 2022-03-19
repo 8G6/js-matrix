@@ -113,7 +113,7 @@ class Matrix{
 
 
 mat = new Matrix('canv')
-mat.fontSize    = '40pt'
+mat.fontSize    = '2pt'
 mat.maximize    = 1
 mat.rain        = 1
 mat.random      = 1
