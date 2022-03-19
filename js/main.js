@@ -1,4 +1,10 @@
-// Get the canvas node and the drawing context
+function maximize(canvas){
+    fixBody()
+    canvas.width = document.body.offsetWidth;
+    canvas.height = document.body.offsetHeight;
+    
+}
+
 const canvas = document.getElementById('canv');
 const ctx = canvas.getContext('2d');
 
