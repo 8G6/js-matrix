@@ -1,24 +1,21 @@
 
 class Matrix{
     constructor(canvas){
-        
         this.canvas      = $('#'+canvas)
         this.timeout     = 50
         this.ctx         = this.canvas.getContext('2d');
         this.background  = 'black'
-        this.bodyDime    = {w:this.canvas.width,h:this.canvas.height}
         this.font        = 'monospace'
         this.fontSize    = '20pt'
         this.charArray   = chars('0','z')
         this.intervel    = null
         this.fontColor   = 'green'
         this.maximize    = true
-        this.x           = 1
-        this.y           = 1
+        this.spaceX      = 50
+        this.spaceY      = 50
         this.random      = false
         this.randomColor = false
         this.fadeOut     = false
-        
     }
     fadeEffect=()=>{
         if(this.fadeOut){
@@ -43,7 +40,7 @@ class Matrix{
       this.fadeEffect()
       let i,j;
       this.ctx.font  = this.fontSize+' '+this.font;
-      let [x,y]=coordinates(this.x,this.y)
+      let [x,y]=coordinates(this.spaceX,this.spaceY)
       for(i=0;i<x.length;i++){
           for(j=0;j<y.length;j++){
             console.log(i,j)
@@ -56,7 +53,7 @@ class Matrix{
       this.fadeEffect()
       this.ctx.font  = this.fontSize+' '+this.font;
       let i,j,Y=0;
-      let [x,y]=coordinates(this.x,this.y)
+      let [x,y]=coordinates(this.spaceX,this.spaceY)
       
       for(i=0;i<x.length;i++){
           for(j=0;j<y.length;j++){
@@ -80,7 +77,7 @@ class Matrix{
       this.setBackground('black')
       let i,j;
       this.ctx.font  = this.fontSize+' '+this.font;
-      let [x,y]=coordinates(this.x,this.y)
+      let [x,y]=coordinates(this.spaceX,this.spaceY)
     }
     break=(delay=1)=>{
         setTimeout(()=>{
@@ -96,13 +93,11 @@ class Matrix{
 }
 
 mat = new Matrix('canv')
-mat.x = 15
-mat.y = 10
-mat.fontSize = '15pt'
-mat.timeout=50
-mat.maximize = 1
-mat.random = 0
-mat.fadeOut = true
+mat.fontSize    = '15pt'
+mat.timeout     = 100
+mat.maximize    = 1
+mat.random      = 0
+mat.fadeOut     = false
 mat.randomColor = true
 mat.itrate()
 

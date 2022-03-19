@@ -3,10 +3,11 @@ let uni   = (a) => a.charCodeAt()
 let chr   = (a) => String.fromCharCode(a)
 let rand  = (a) => a[Math.floor(Math.random()*a.length)]
 
-
-
-function bodyDime(){
-    return {w:document.body.offsetWidth,h:document.body.offsetHeight}
+function fixBody(){
+    document.body.style.margin=0;
+    document.body.style.padding=0;
+    document.body.style.width='100vw';
+    document.body.style.height='100vh'
 }
 
 function setColor(color,random){
@@ -36,10 +37,10 @@ function toHex(strat,end){
     return arr
 }
 function maximize(canvas){
+    fixBody()
     canvas.width = document.body.offsetWidth;
     canvas.height = document.body.offsetHeight;
     
-
 }
 
 function randomColor(){
