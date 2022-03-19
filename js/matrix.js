@@ -123,7 +123,6 @@ class Matrix{
 mat = new Matrix('canv')
 mat.fontSize    = '5pt'
 mat.maximize    = 1
-mat.rain        = 1
 mat.fadeOut     = true
 mat.randomColor = true
 mat.itrate()
