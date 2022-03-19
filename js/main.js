@@ -36,8 +36,7 @@ function matrix () {
 
   const text = String.fromCharCode(Math.random() * 122);
   for(i=0;i<screen.width;i+=200){
-        ctx.fillText(text, i, j);
-
+        ctx.fillText(text, i, i);
   }
 }
 // render the animation at 20 FPS.
