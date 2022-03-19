@@ -15,7 +15,7 @@ const canvas = document.getElementById('canv');
 const ctx = canvas.getContext('2d');
 
 
-const w = canvas.width = document.body.offsetWidth;
+const w = canvas.width = screen.;
 const h = canvas.height = document.body.offsetHeight;
 
 maximize(canvas)
