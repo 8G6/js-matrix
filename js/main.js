@@ -36,7 +36,7 @@ function matrix () {
 
  
   ypos.forEach((y, ind) => {
-    const text = String.fromCharCode(Math.random() * 122);
+    
     const x = ind * 20;
     ctx.fillText(text, x, y);
     console.log(x,y)
