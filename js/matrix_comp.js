@@ -61,6 +61,7 @@ let chars=(strat,end)=>{
 
 const hex = toHex(0,256);
 
+
 let colors = {
     "air force blue": "#5d8aa8",
     "alice blue": "#f0f8ff",
