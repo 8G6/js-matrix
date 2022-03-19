@@ -80,7 +80,6 @@ class Matrix{
             }
         },this.timeout)
     }
-     
     
     break=(delay=1)=>{
         setTimeout(()=>{
