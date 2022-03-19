@@ -56,6 +56,7 @@ function maximize(canvas){
     canvas.height = document.body.offsetHeight;
     
 }
+ma
 function matrix () {
     ctx.fillStyle = '#0001';
     ctx.fillRect(0, 0, w, h);
