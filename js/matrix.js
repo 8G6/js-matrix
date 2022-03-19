@@ -89,7 +89,7 @@ class Matrix{
     }
     Rain=()=>{
         this.fadeEffect()
-        let i=0;
+        let i,j;
         for()
     }
     
