@@ -1,4 +1,4 @@
-function matrix () {
+function matrix (ctx) {
  
     ctx.fillStyle = '#0001';
     ctx.fillRect(0, 0, w, h);
