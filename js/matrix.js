@@ -6,7 +6,7 @@ class Matrix{
         this.ctx         = this.canvas.getContext('2d');
         this.background  = 'black'
         this.font        = 'monospace'
-        this.fontSize    = '20pt'
+        this.fontSize    = '10pt'
         this.charArray   = chars('0','z')
         this.intervel    = null
         this.fontColor   = 'green'
