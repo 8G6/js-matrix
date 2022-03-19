@@ -41,7 +41,7 @@ function matrix () {
             ctx.fillText(String.fromCharCode(Math.random() * 122), i, j);
         }
   }
-  c=Math.random() * 
+  c=Math.random() * screen.height
 
 }
 // render the animation at 20 FPS.
