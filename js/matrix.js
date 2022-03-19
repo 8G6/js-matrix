@@ -16,7 +16,7 @@ class Matrix{
         this.random      = false
         this.randomColor = false
         this.fadeOut     = false
-        this.rain        = f
+        this.rain        = false
     }
     
       
