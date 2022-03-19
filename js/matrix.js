@@ -78,7 +78,7 @@ class Matrix{
             this.ctx.fillText(text, x, y);
             if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
             else ypos[ind] = y + 20;
-          });
+        });
     }
     
     itrate=()=>{
