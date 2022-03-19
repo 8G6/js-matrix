@@ -34,9 +34,10 @@ function matrix () {
   ctx.fillStyle = '#0f0';
   ctx.font = '20pt monospace';
 
-  const text = String.fromCharCode(Math.random() * 122);
+  
   for(i=0;i<screen.width;i+=20){
         for(j=0;j<c;j++){
+            const text = String.fromCharCode(Math.random() * 122);
             ctx.fillText(text, j*10, i*10);
         }
   }
