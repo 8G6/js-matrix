@@ -86,6 +86,7 @@ class Matrix{
             if(this.random){
                 this.Random()
             }
+            if(th)
             else{
                 this.matrix()
             }
