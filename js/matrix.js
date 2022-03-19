@@ -130,7 +130,7 @@ mat = new Matrix('canv')
 mat.fontSize    = '25pt'
 mat.maximize    = 1
 mat.rain        = 1
-mat.fadeOut     = false
+mat.fadeOut     = true
 mat.randomColor = true
 mat.itrate()
 
