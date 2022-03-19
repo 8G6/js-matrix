@@ -98,30 +98,6 @@ class Matrix{
         //         this.ctx.fillStyle         = '#000000'
         //     }
         // }
-        const cols = Math.floor(window.width / 20) + 1;
-        const ypos = Array(80).fill(0);
-
-        this.ctx.fillStyle = '#0001';
-        this.ctx.fillRect(0, 0, window.width, window.height);
-
-        this.ctx.fillStyle = '#0f0';
-        this.ctx.font = '20pt monospace';
-
-        
-        ypos.forEach((y, ind) => {
-            // generate a random character
-            const text = String.fromCharCode(Math.random() * 122);
-
-            // x coordinate of the column, y coordinate is already given
-            const x = ind * 20;
-            // render the character at (x, y)
-            this.ctx.fillText(text, x, y);
-
-            // randomly reset the end of the column if it's at least 100px high
-            if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
-            // otherwise just move the y coordinate for the column 20px down,
-            else ypos[ind] = y + 20;
-        });
     }
     
     itrate=()=>{
