@@ -69,7 +69,7 @@ class Matrix{
       }
     }
     rain=()=>{
-        
+        const ypos = Array(cols).fill(0);
     }
     itrate=()=>{
         this.init()
