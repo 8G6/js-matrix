@@ -111,7 +111,7 @@ class Matrix{
 mat = new Matrix('canv')
 mat.fontSize    = '15pt'
 mat.maximize    = 1
-mat.ra
+mat.rain        = 1
 mat.fadeOut     = false
 mat.randomColor = false
 mat.itrate()
