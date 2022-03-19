@@ -90,6 +90,7 @@ class Matrix{
     Rain=()=>{
         this.fadeEffect()
         
+
         let i,j;
         for(i=0;i<screen.width;i+=20){
             for(j=0;j<screen.height*10*Math.random();j++){
