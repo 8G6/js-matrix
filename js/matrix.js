@@ -71,7 +71,7 @@ class Matrix{
     Rain=()=>{
         this.fadeEffect()
         this.ctx.font  = this.fontSize+' '+this.font;
-        const ypos = Array(parseInt(screen.height/10)).fill(0);
+        const ypos = Array(parseInt(80)).fill(0);
         ypos.forEach((y, ind) => {
             const text = rand(this.charArray)
             const x = ind * 20;
