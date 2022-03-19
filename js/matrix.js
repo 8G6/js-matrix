@@ -104,8 +104,8 @@ class Matrix{
         this.ctx.fillStyle = '#0001';
         this.ctx.fillRect(0, 0, w, h);
 
-        ctx.fillStyle = '#0f0';
-        ctx.font = '20pt monospace';
+        this.ctx.fillStyle = '#0f0';
+        this.ctx.font = '20pt monospace';
 
         
         ypos.forEach((y, ind) => {
@@ -115,7 +115,7 @@ class Matrix{
             // x coordinate of the column, y coordinate is already given
             const x = ind * 20;
             // render the character at (x, y)
-            ctx.fillText(text, x, y);
+            this.ctx.fillText(text, x, y);
 
             // randomly reset the end of the column if it's at least 100px high
             if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
