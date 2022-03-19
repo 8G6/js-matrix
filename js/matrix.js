@@ -939,13 +939,7 @@ class Matrix{
 }
 
 
-mat = new Matrix('canv')
-mat.fontSize    = '11pt'
-mat.maximize    = 1
-mat.random      = true
-mat.fadeOut     = true
-mat.randomColor = true
-mat.itrate()
+
 
 
 
