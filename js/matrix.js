@@ -22,7 +22,7 @@ function matrix (ctx) {
       else ypos[ind] = y + 20;
     });
   
-  }
+}
 class Matrix{
     constructor(canvas){
         this.canvas      = $('#'+canvas)
