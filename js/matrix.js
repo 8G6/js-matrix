@@ -1,5 +1,5 @@
 function matrix (ctx,ypos) {
- 
+    
     ctx.fillStyle = '#0001';
     ctx.fillRect(0, 0, w, h);
   
