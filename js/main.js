@@ -65,7 +65,7 @@ function matrix () {
     k=[]
     const ypos = Array(parseInt(screen.height/100)).fill(0);
     ypos.forEach((y, ind) => {
-        const text = rand(this.charArray)
+        const text = rand(t)
         const x = ind * 20;
         console.log(text, x, y)
         ctx.fillText(text, x, ind);
