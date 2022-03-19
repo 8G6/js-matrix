@@ -37,7 +37,7 @@ function matrix () {
   
   for(i=0;i<screen.width;i+=20){
         for(j=0;j<c;j++){
-            const text = String.fromCharCode(Math.random() * 122);
+            const text = 
             ctx.fillText(text, j*10, i*10);
         }
   }
