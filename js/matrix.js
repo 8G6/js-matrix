@@ -11,8 +11,8 @@ class Matrix{
         this.intervel    = null
         this.fontColor   = 'green'
         this.maximize    = true
-        this.spaceX      = 50
-        this.spaceY      = 50
+        this.spaceX      = 150
+        this.spaceY      = 150
         this.random      = false
         this.randomColor = false
         this.fadeOut     = false
@@ -50,7 +50,6 @@ class Matrix{
       let [x,y]=coordinates(this.spaceX,this.spaceY)
       for(i=0;i<x.length;i++){
           for(j=0;j<y.length;j++){
-            console.log(i,j)
             this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
             this.ctx.fillText(rand(this.charArray),x[i],y[j]);
           }
@@ -62,14 +61,6 @@ class Matrix{
       let i,j;
       let [x,y]=coordinates(this.spaceX,this.spaceY)
       try{
-          if(this.random && (!this.randJSON.y || !this.randJSON.y)){
-            for(i=0;i<x.length;i++){
-                for(j=0;j<y.length;j++){
-                    this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
-                    this.ctx.fillText(rand(this.charArray),parseInt(screen.width*Math.random()),parseInt(screen.height*Math.random()))
-                }
-            }
-          }
           if(this.randJSON.y){
             for(i=0;i<x.length;i++){
                 this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
@@ -80,6 +71,14 @@ class Matrix{
             for(i=0;i<y.length;i++){
                 this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
                 this.ctx.fillText(rand(this.charArray),Math.random() * screen.width,y[i])
+            }
+          }
+          else{
+            for(i=0;i<x.length;i++){
+                for(j=0;j<y.length;j++){
+                    this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
+                    this.ctx.fillText(rand(this.charArray),parseInt(screen.width*Math.random()),parseInt(screen.height*Math.random()))
+                }
             }
           }
         
@@ -129,11 +128,11 @@ class Matrix{
 
 
 mat = new Matrix('canv')
-mat.fontSize    = '25pt'
+mat.fontSize    = '11pt'
 mat.maximize    = 1
-mat.rain        = 1
+mat.random      = true
 mat.fadeOut     = true
-mat.randomColor = false
+mat.randomColor = true
 mat.itrate()
 
 
