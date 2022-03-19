@@ -63,7 +63,7 @@ class Matrix{
       
       for(i=0;i<x.length;i++){
             this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
-            this.ctx.fillText(rand(this.charArray),x[i],Math.random()*screen.width)
+            this.ctx.fillText(rand(this.charArray),x[i],Math.random()*screen.height)
       }
     }
     Rain=()=>{
