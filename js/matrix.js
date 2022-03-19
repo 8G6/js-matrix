@@ -117,7 +117,7 @@ mat.fontSize    = '15pt'
 mat.maximize    = 1
 mat.rain        = 1
 mat.random      = 1
-mat.s
+mat.spaceX      = 100
 mat.fadeOut     = true
 mat.randomColor = true
 mat.itrate()
