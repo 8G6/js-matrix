@@ -38,10 +38,7 @@ function matrix () {
   ypos.forEach((y, ind) => {
     
     const x = ind * 20;
-    ctx.fillText(text, x, y);
-    console.log(x,y)
-    if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
-    else ypos[ind] = y + 20;
+    
   });
 }
 
