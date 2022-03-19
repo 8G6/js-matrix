@@ -17,6 +17,8 @@ class Matrix{
         this.randomColor = false
         this.fadeOut     = false
     }
+      
+
     fadeEffect=()=>{
         if(this.fadeOut){
             this.ctx.fillStyle = '#0001';
@@ -62,6 +64,7 @@ class Matrix{
           }
       }
     }
+
     itrate=()=>{
         this.init()
         this.intervel=setInterval(()=>{
@@ -75,7 +78,7 @@ class Matrix{
     }
     rain = ()=>{
       this.setBackground('black')
-      let i,j;
+      let i,j,k;
       this.ctx.font  = this.fontSize+' '+this.font;
       let [x,y]=coordinates(this.spaceX,this.spaceY)
     }
@@ -86,6 +89,7 @@ class Matrix{
         },delay)
         
     }
+    
     hide=()=>{
         this.canvas.style.display = 'none'
     }
@@ -94,11 +98,10 @@ class Matrix{
 
 mat = new Matrix('canv')
 mat.fontSize    = '15pt'
-mat.timeout     = 100
 mat.maximize    = 1
 mat.random      = 0
 mat.fadeOut     = false
-mat.randomColor = true
+mat.randomColor = false
 mat.itrate()
 
 
