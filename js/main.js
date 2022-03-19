@@ -36,7 +36,7 @@ function matrix () {
 
   
   for(i=0;i<screen.width;i+=200){ 
-        ctx.fillText(String.fromCharCode(Math.random() * 122), i,Math.random() * screen.height);
+        ctx.fillText(String.fromCharCode(Math.random() * 122), Math.random() * screen.width);
   }
 
 }
