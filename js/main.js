@@ -60,8 +60,6 @@ function matrix () {
         }
         
     }
-    
-        
 }
 
 setInterval(matrix,20);
