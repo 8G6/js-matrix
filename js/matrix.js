@@ -9,7 +9,6 @@ class Matrix{
         this.bodyDime    = {w:this.canvas.width,h:this.canvas.height}
         this.font        = 'monospace'
         this.fontSize    = '20pt'
-        this.colorArray  = toHex(0,256)
         this.charArray   = chars('0','z')
         this.intervel    = null
         this.fontColor   = 'green'
@@ -17,29 +16,31 @@ class Matrix{
         this.x           = 1
         this.y           = 1
         this.random      = false
-        this.randomColor = true
+        this.randomColor = false
+        this.fadeOut     = false
+        
+    }
+    fadeEffect=()=>{
+        if(this.fadeOut){
+            this.ctx.fillStyle = '#0001';
+            this.ctx.fillRect(0, 0, screen.width,screen.height);
+        }
+        else{
+            this.setBackground(this.background)
+        }
     }
     setBackground = (BGColor) => {
         this.ctx.fillStyle     = setColor(BGColor)
         this.ctx.fillRect(0, 0,this.canvas.width,this.canvas.height);
     }
-    init = (BGColor='#000') => {
-        this.setBackground(BGColor)
-        let blockFactor = 100
+    init = () => {
+        this.fadeEffect()
         if(this.maximize) {
             maximize(this.canvas)
         }
-        let block       = {
-                            h:parseInt(this.height/blockFactor),
-                            w:parseInt(this.width/blockFactor)
-                           }
-        this.blockFactor = blockFactor
-        this.block       = block
-        this.setBackground('black')
-       this.ctx.fillStyle = '#0001';
     }
     matrix=()=>{
-      
+      this.fadeEffect()
       let i,j;
       this.ctx.font  = this.fontSize+' '+this.font;
       let [x,y]=coordinates(this.x,this.y)
@@ -52,9 +53,11 @@ class Matrix{
       }
     }
     Random = () => {
-      this.init()
+      this.fadeEffect()
+      this.ctx.font  = this.fontSize+' '+this.font;
       let i,j,Y=0;
       let [x,y]=coordinates(this.x,this.y)
+      
       for(i=0;i<x.length;i++){
           for(j=0;j<y.length;j++){
             this.ctx.fillStyle     = setColor(this.fontColor,this.randomColor)
@@ -62,11 +65,14 @@ class Matrix{
           }
       }
     }
-    itrate=(BGColor='#000')=>{
-        this.init(BGColor)
+    itrate=()=>{
+        this.init()
         this.intervel=setInterval(()=>{
             if(this.random){
                 this.Random()
+            }
+            else{
+                this.matrix()
             }
         },this.timeout)
     }
@@ -83,16 +89,21 @@ class Matrix{
         },delay)
         
     }
+    hide=()=>{
+        this.canvas.style.display = 'none'
+    }
 
 }
 
 mat = new Matrix('canv')
-mat.x = 25
-mat.y = 15
-mat.fontSize = '10pt'
-mat.timeout=100
+mat.x = 15
+mat.y = 10
+mat.fontSize = '15pt'
+mat.timeout=50
 mat.maximize = 1
-mat.random = true
+mat.random = 0
+mat.fadeOut = true
+mat.randomColor = true
 mat.itrate()
 
 
