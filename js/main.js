@@ -35,7 +35,7 @@ function matrix () {
   ctx.font = '20pt monospace';
 
   const text = String.fromCharCode(Math.random() * 122);
-  for(i=0;i<screen.width;i+=200){
+  for(i=0;i<screen.width;i+=20){
         ctx.fillText(text, i, i);
   }
 }
