@@ -27,7 +27,7 @@ ctx.fillRect(0, 0, w, h);
 
 function matrix () {
   
-  const cols = Math.floor(w / 20) + 1;
+  const cols = Math.floor(window.h / 20) + 1;
   const ypos = Array(cols).fill(0);
 
   ctx.fillStyle = '#0001';
