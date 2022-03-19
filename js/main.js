@@ -63,14 +63,15 @@ function matrix () {
     
     ctx.font = '25pt monospace';
     k=[]
-    for(i=0;i<80;i++){
-        for(j=0;j<80;j++){
-            ctx.fillStyle = '#'+rand(o)+rand(o)+rand(o)
-            if(y>Math.random()*1e3){y=0}
-            y+=Math.random()*1e4
-            ctx.fillText(rand(t),i*20,y*20)
-        }
-    }
+    const ypos = Array(parseInt(screen.height/100)).fill(0);
+    ypos.forEach((y, ind) => {
+        const text = rand(this.charArray)
+        const x = ind * 20;
+        console.log(text, x, y)
+        this.ctx.fillText(text, x, ind);
+        if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
+        else ypos[ind] = y + 20;
+    });
 }
 
 setInterval(matrix,20);
