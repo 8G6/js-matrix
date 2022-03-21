@@ -1,3 +1,12 @@
+/*////////////////////////////////////////////////////////////
+
+WRIITEN BY : 8G6
+LICENSE : 
+
+////////////////////////////////////////////////////////////*/
+
+
+
 let    $  = (a) => document.querySelector(a) 
 let uni   = (a) => a.charCodeAt()
 let chr   = (a) => String.fromCharCode(a)
